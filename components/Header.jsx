@@ -25,7 +25,7 @@ export default function Header () {
 
   const handleKeyPress = (event) => {
     if (event.key === 'Enter' && searchText.trim()) {
-      router.push(`workforce/jobs?search=${searchText.trim()}`);
+      router.push(`/workforce/jobs?search=${searchText.trim()}`);
     }
   };
 
