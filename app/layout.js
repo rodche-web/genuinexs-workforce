@@ -1,10 +1,6 @@
 import localFont from "next/font/local";
 import {
-  ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton
+  ClerkProvider
 } from '@clerk/nextjs'
 import './global.css'
 import '@fontsource/roboto/300.css';
@@ -33,13 +29,7 @@ export default function RootLayout({ children }) {
     <ClerkProvider>
       <html lang="en">
         <body className={`${geistSans.variable} ${geistMono.variable}`}>
-          <SignedOut>
-            <SignInButton />
-          </SignedOut>
-          <SignedIn>
-            <UserButton />
-          </SignedIn>
-            {children}
+          {children}
         </body>
       </html>
     </ClerkProvider>

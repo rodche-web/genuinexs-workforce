@@ -1,17 +1,14 @@
 import { SignIn } from '@clerk/nextjs'
-import { Box } from '@mui/material';
 
 export default function LoginPage() {
   return (
-    <Box sx={{ p: 3, maxWidth: '50%', margin: '0 auto' }}>
-        <Box sx={{ 
-        display: 'flex', 
-        justifyContent: 'space-between', 
+    <div style={{
+        display: 'flex',
         alignItems: 'center',
-        mb: 4 
-        }}>
-            <SignIn />
-        </Box>
-    </Box>
+        justifyContent: 'center',
+        height: '100vh'
+    }}>
+        <SignIn />
+    </div>
   )
 }
