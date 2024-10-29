@@ -104,7 +104,7 @@ export default function CreateJobForm() {
       
       alert('Job Created');
       setFormData(initialFormData);
-      router.push('workforce/jobs');
+      router.push('/workforce/jobs');
     } catch (err) {
       alert(`Error: ${err.message}` || 'An Error Occured');
     } finally {
