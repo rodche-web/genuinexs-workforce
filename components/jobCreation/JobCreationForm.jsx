@@ -126,7 +126,6 @@ export default function CreateJobForm() {
 
   const renderAboutStep = () => (
     <Stack spacing={2}>
-      {/* Basic Information */}
       <Accordion 
         expanded={expanded === 'panel1'} 
         onChange={handleChange('panel1')}
@@ -160,7 +159,6 @@ export default function CreateJobForm() {
         </AccordionDetails>
       </Accordion>
 
-      {/* Job Description */}
       <Accordion 
         expanded={expanded === 'panel2'} 
         onChange={handleChange('panel2')}
@@ -193,7 +191,6 @@ export default function CreateJobForm() {
         </AccordionDetails>
       </Accordion>
 
-      {/* Requirements */}
       <Accordion 
         expanded={expanded === 'panel3'} 
         onChange={handleChange('panel3')}
@@ -222,7 +219,6 @@ export default function CreateJobForm() {
         </AccordionDetails>
       </Accordion>
 
-      {/* Job Type and Location */}
       <Accordion 
         expanded={expanded === 'panel4'} 
         onChange={handleChange('panel4')}
@@ -256,7 +252,6 @@ export default function CreateJobForm() {
         </AccordionDetails>
       </Accordion>
 
-      {/* Salary and Benefits */}
       <Accordion 
         expanded={expanded === 'panel5'} 
         onChange={handleChange('panel5')}
@@ -287,7 +282,6 @@ export default function CreateJobForm() {
         </AccordionDetails>
       </Accordion>
 
-      {/* Posting Details */}
       <Accordion 
         expanded={expanded === 'panel6'} 
         onChange={handleChange('panel6')}
@@ -402,7 +396,6 @@ export default function CreateJobForm() {
 
   return (
     <Box sx={{ p: 3, maxWidth: '50%', margin: '0 auto' }}>
-      {/* Header Section */}
       <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 4, alignItems: 'center' }}>
         <Typography variant="h5">Create Job</Typography>
         <Box>
@@ -421,7 +414,6 @@ export default function CreateJobForm() {
         </Box>
       </Box>
 
-      {/* Stepper */}
       <Stepper activeStep={activeStep} sx={{ mb: 4 }} alternativeLabel>
         {steps.map((label) => (
           <Step key={label}>
@@ -430,10 +422,8 @@ export default function CreateJobForm() {
         ))}
       </Stepper>
 
-      {/* Step Content */}
       {renderStepContent()}
 
-      {/* Navigation Buttons */}
       <Box sx={{ mt: 4, display: 'flex', justifyContent: 'space-between' }}>
         <Button
           variant="outlined"
@@ -451,6 +441,7 @@ export default function CreateJobForm() {
               bgcolor: green[700]
             }
           }}
+          disabled={isLoading}
           onClick={handleNext}
         >
           {`Next: ${activeStep < steps.length - 1 ? steps[activeStep + 1] : 'Submit'}`}

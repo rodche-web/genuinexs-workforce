@@ -42,7 +42,6 @@ export default function Header () {
         }}
       >
         <Toolbar>
-          {/* Logo */}
           <Typography
             variant="h6"
             component="div"
@@ -57,7 +56,6 @@ export default function Header () {
             Workforce
           </Typography>
 
-          {/* Search Bar */}
           <Box
             sx={{
               flexGrow: 1,
@@ -85,7 +83,6 @@ export default function Header () {
             />
           </Box>
 
-          {/* Right side icons */}
           <IconButton>
             <AddIcon />
           </IconButton>
